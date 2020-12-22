@@ -11,14 +11,6 @@ import org.apache.flink.streaming.api.windowing.windows.TimeWindow
 import org.apache.flink.util.Collector
 import redis.clients.jedis.Jedis
 
-
-/*
- * @Author: Alice菌
- * @Date: 2020/12/5 15:45
- * @Description: 
-    使用布隆过滤器的UV统计
- */
-
 object UvWithBloomFilter {
 
   // 定义样例类，用于封装数据

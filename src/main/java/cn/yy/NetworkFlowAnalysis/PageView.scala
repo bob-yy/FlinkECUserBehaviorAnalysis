@@ -5,9 +5,6 @@ import org.apache.flink.streaming.api.scala.{StreamExecutionEnvironment, _}
 import org.apache.flink.streaming.api.windowing.time.Time
 
 /*
- * @Author: Alice菌
- * @Date: 2020/12/5 10:36
- * @Description:
    实时统计每小时内的网站PV
  */
 object PageView {

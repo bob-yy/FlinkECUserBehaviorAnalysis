@@ -9,9 +9,6 @@ import org.apache.flink.streaming.api.windowing.time.Time
 import org.apache.flink.streaming.api.windowing.windows.TimeWindow
 import org.apache.flink.util.Collector
 /*
- * @Author: Alice菌
- * @Date: 2020/12/11 10:52
- * @Description: 
     页面广告点击量统计 (开一小时的时间窗口，滑动距离为5秒)
  */
 object AdStatisticsByGeo {

@@ -2,25 +2,14 @@ package cn.yy.LoginFailDetect
 
 import java.util
 
-//import com.hypers.LoginFailDetect.LoginFailOne.LoginEvent
-//import com.hypers.LoginFailDetect.LoginFailTwo.LoginEvent
-//import org.apache.flink.api.common.state.{ListState, ListStateDescriptor}
 import org.apache.flink.cep.PatternSelectFunction
 import org.apache.flink.cep.scala.{CEP, PatternStream}
 import org.apache.flink.cep.scala.pattern.Pattern
 import org.apache.flink.streaming.api.TimeCharacteristic
-//import org.apache.flink.streaming.api.functions.KeyedProcessFunction
 import org.apache.flink.streaming.api.functions.timestamps.BoundedOutOfOrdernessTimestampExtractor
 import org.apache.flink.streaming.api.scala._
 import org.apache.flink.streaming.api.windowing.time.Time
-//import org.apache.flink.util.Collector
 
-/*
- * @Author: Alice菌
- * @Date: 2020/11/23 17:12
- * @Description: 
-    
- */
 object LoginFailWithCep {
 
   // 输入的登录事件样例类

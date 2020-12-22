@@ -9,12 +9,7 @@ import org.apache.flink.streaming.api.windowing.time.Time
 import org.apache.flink.util.Collector
 
 
-/*
- * @Author: Alice菌
- * @Date: 2020/12/13 19:35
- * @Description: 
-    
- */
+
 object OrderTimeout {
 
   // 定义输入的订单事件样例类

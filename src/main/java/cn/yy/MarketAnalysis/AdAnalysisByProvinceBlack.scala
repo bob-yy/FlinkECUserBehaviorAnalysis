@@ -12,9 +12,6 @@ import org.apache.flink.streaming.api.windowing.time.Time
 import org.apache.flink.streaming.api.windowing.windows.TimeWindow
 import org.apache.flink.util.Collector
 /*
- * @Author: Alice菌
- * @Date: 2020/12/11 11:37
- * @Description:
     黑名单过滤
  */
 object AdAnalysisByProvinceBlack {

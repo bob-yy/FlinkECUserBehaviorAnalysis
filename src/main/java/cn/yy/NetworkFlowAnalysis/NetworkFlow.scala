@@ -18,9 +18,6 @@ import org.apache.flink.streaming.api.scala._
 import scala.collection.mutable.ListBuffer
 
 /*
- * @Author: Alice菌
- * @Date: 2020/11/23 14:16
- * @Description:
     电商用户行为数据分析：实时流量统计
     <每隔5秒，输出最近10分钟内访问量最多的前N个URL>
  */

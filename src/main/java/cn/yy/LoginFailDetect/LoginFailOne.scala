@@ -12,9 +12,6 @@ import org.apache.flink.util.Collector
 
 import scala.collection.mutable.ListBuffer
 /*
- * @Author: Alice菌
- * @Date: 2020/11/23 16:03
- * @Description:
  *  电商用户行为数据分析：   恶意登录监控
     < 如果同一用户（可以是不同IP）在2秒之内连续两次登录失败，就认为存在恶意登录的风险，输出相关的信息进行报警提示。 >
  */

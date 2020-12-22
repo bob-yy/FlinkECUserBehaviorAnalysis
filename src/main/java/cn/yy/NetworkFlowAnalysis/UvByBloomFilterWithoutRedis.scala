@@ -12,10 +12,7 @@ import org.apache.flink.streaming.api.windowing.time.Time
 import org.apache.flink.streaming.api.windowing.windows.TimeWindow
 import org.apache.flink.util.Collector
 /*
- * @Author: Alice菌
- * @Date: 2020/12/5 18:29
- * @Description: 
-// uv: unique visitor
+
 //  有多少用户访问过网站；pv按照userid去重
 //  滑动窗口：窗口长度1小时，滑动距离5秒钟，每小时用户数量1亿
 //  大数据去重的唯一解决方案：布隆过滤器

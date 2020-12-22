@@ -10,12 +10,6 @@ import org.apache.flink.streaming.api.scala._
 import org.apache.flink.streaming.api.windowing.time.Time
 import org.apache.flink.util.Collector
 
-/*
- * @Author: Alice菌
- * @Date: 2020/11/23 16:51
- * @Description: 
-    
- */
 object LoginFailTwo {
 
   // 输入的登录事件样例类

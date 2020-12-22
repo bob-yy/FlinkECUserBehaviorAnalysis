@@ -15,9 +15,6 @@ import org.apache.flink.util.Collector
 import scala.util.Random
 
 /*
- * @Author: Alice菌
- * @Date: 2020/12/7 17:32
- * @Description: 
     电商用户行为数据分析：  市场营销商业指标统计分析
     APP市场推广统计   - - > 分渠道统计
  */

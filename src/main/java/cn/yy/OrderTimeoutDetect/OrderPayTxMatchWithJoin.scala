@@ -7,12 +7,6 @@ import org.apache.flink.streaming.api.scala._
 import org.apache.flink.streaming.api.windowing.time.Time
 import org.apache.flink.util.Collector
 
-/*
- * @Author: Alice菌
- * @Date: 2020/12/12 20:23
- * @Description: 
-     来自两条流的订单交易匹配  （  JOIN 实现 ）
- */
 object OrderPayTxMatchWithJoin {
 
   // 输入输出的样例类

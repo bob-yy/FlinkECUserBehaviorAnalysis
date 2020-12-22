@@ -9,12 +9,7 @@ import org.apache.flink.streaming.api.TimeCharacteristic
 import org.apache.flink.streaming.api.functions.timestamps.BoundedOutOfOrdernessTimestampExtractor
 import org.apache.flink.streaming.api.scala.{StreamExecutionEnvironment, _}
 import org.apache.flink.streaming.api.windowing.time.Time
-/*
- * @Author: Alice菌
- * @Date: 2020/12/11 15:46
- * @Description:
 
- */
 object OrderTimeoutWithOutCep {
 
   // 定义输入的订单事件样例类

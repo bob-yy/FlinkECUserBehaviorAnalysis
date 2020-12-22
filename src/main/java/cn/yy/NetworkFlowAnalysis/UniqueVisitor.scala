@@ -7,12 +7,6 @@ import org.apache.flink.streaming.api.windowing.time.Time
 import org.apache.flink.streaming.api.windowing.windows.TimeWindow
 import org.apache.flink.util.Collector
 
-/*
- * @Author: Alice菌
- * @Date: 2020/12/5 14:54
- * @Description: 
-    
- */
 object UniqueVisitor {
 
   case class UserBehavior(userId: Long, itemId: Long, categoryId: Int, behavior: String, timestamp: Long)
