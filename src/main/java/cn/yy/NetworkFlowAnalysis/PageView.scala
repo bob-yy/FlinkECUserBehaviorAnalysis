@@ -1,4 +1,4 @@
-package com.hypers.NetworkFlowAnalysis
+package cn.yy.NetworkFlowAnalysis
 
 import org.apache.flink.streaming.api.TimeCharacteristic
 import org.apache.flink.streaming.api.scala.{StreamExecutionEnvironment, _}
@@ -24,7 +24,7 @@ object PageView {
     env.setParallelism(1)
 
     // 读取文本数据
-    env.readTextFile("G:\\idea arc\\BIGDATA\\project\\src\\main\\resources\\UserBehavior.csv")
+    env.readTextFile("C:\\Users\\Administrator\\IdeaProjects\\FlinkECUserBehaviorAnalysis\\src\\main\\resources\\UserBehavior.csv")
       // 对文本数据进行封装处理
       .map(data => {
         val dataArray: Array[String] = data.split(",")

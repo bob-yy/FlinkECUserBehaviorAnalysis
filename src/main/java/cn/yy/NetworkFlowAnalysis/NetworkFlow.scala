@@ -1,4 +1,4 @@
-package com.hypers.NetworkFlowAnalysis
+package cn.yy.NetworkFlowAnalysis
 
 import java.sql.Timestamp
 import java.text.SimpleDateFormat
@@ -41,7 +41,7 @@ object NetworkFlow {
     // 设置任务并行度
     env.setParallelism(1)
     // 读取文件数据
-    val stream: DataStream[String] = env.readTextFile("G:\\idea arc\\BIGDATA\\project\\src\\main\\resources\\apache.log")
+    val stream: DataStream[String] = env.readTextFile("C:\\Users\\Administrator\\IdeaProjects\\FlinkECUserBehaviorAnalysis\\src\\main\\resources\\apache.log")
 
     // 对 stream 数据进行处理
     stream.map(data => {

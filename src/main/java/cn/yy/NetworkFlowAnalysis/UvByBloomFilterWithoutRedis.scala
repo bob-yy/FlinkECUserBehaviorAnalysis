@@ -1,4 +1,4 @@
-package com.hypers.NetworkFlowAnalysis
+package cn.yy.NetworkFlowAnalysis
 
 import java.lang
 import java.sql.Timestamp
@@ -35,7 +35,8 @@ object UvByBloomFilterWithoutRedis {
     env.setStreamTimeCharacteristic(TimeCharacteristic.EventTime)
     env.setParallelism(1)
 
-    val stream: DataStream[String] = env.readTextFile("G:\\idea arc\\BIGDATA\\project\\src\\main\\resources\\UserBehavior.csv")
+    val stream: DataStream[String] = env
+      .readTextFile("C:\\Users\\Administrator\\IdeaProjects\\FlinkECUserBehaviorAnalysis\\src\\main\\resources\\UserBehavior.csv")
       .map(line => {
         val arr: Array[String] = line.split(",")
         UserBehavior(arr(0).toLong, arr(1).toLong, arr(2).toLong, arr(3), arr(4).toLong * 1000)

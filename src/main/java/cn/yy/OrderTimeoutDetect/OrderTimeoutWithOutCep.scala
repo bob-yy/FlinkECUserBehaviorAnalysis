@@ -1,4 +1,4 @@
-package com.hypers.OrderTimeoutDetect
+package cn.yy.OrderTimeoutDetect
 
 import java.util
 
@@ -31,7 +31,7 @@ object OrderTimeoutWithOutCep {
     // 设置时间特征为事件时间
     env.setStreamTimeCharacteristic(TimeCharacteristic.EventTime)
     // 从文件中读取数据，并转换成样例类
-    val orderEventStream: DataStream[OrderEvent] = env.readTextFile("G:\\idea arc\\BIGDATA\\project\\src\\main\\resources\\OrderLog.csv")
+    val orderEventStream: DataStream[OrderEvent] = env.readTextFile("C:\\Users\\Administrator\\IdeaProjects\\FlinkECUserBehaviorAnalysis\\src\\main\\resources\\OrderLog.csv")
       .map(data => {
         // 样例数据： 34729,pay,sd76f87d6,1558430844
         val dataArray: Array[String] = data.split(",")

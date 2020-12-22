@@ -1,4 +1,4 @@
-package com.hypers.OrderTimeoutDetect
+package cn.yy.OrderTimeoutDetect
 
 import org.apache.flink.streaming.api.TimeCharacteristic
 import org.apache.flink.streaming.api.functions.co.ProcessJoinFunction
@@ -28,7 +28,7 @@ object OrderPayTxMatchWithJoin {
     env.setStreamTimeCharacteristic(TimeCharacteristic.EventTime)
 
     // 从 OrderLog.csv 文件中读取数据 ，并转换成样例类
-    val orderEventStream: KeyedStream[OrderEvent, String] = env.readTextFile("G:\\idea arc\\BIGDATA\\project\\src\\main\\resources\\OrderLog.csv")
+    val orderEventStream: KeyedStream[OrderEvent, String] = env.readTextFile("C:\\Users\\Administrator\\IdeaProjects\\FlinkECUserBehaviorAnalysis\\src\\main\\resources\\OrderLog.csv")
       .map(data => {
         // 样例数据 ：  34731,pay,35jue34we,1558430849
         val dataArray: Array[String] = data.split(",")
@@ -41,7 +41,7 @@ object OrderPayTxMatchWithJoin {
       .keyBy(_.txId)    // 根据 订单id 分组
 
     // 从 ReceiptLog.csv 文件中读取数据 ，并转换成样例类
-    val receiptStream: KeyedStream[ReceiptEvent, String] = env.readTextFile("G:\\idea arc\\BIGDATA\\project\\src\\main\\resources\\ReceiptLog.csv")
+    val receiptStream: KeyedStream[ReceiptEvent, String] = env.readTextFile("C:\\Users\\Administrator\\IdeaProjects\\FlinkECUserBehaviorAnalysis\\src\\main\\resources\\ReceiptLog.csv")
       .map(data => {
         // 样例数据： 3hu3k2432,alipay,1558430848
         val dataArray: Array[String] = data.split(",")

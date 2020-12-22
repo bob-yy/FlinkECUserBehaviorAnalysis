@@ -1,4 +1,4 @@
-package com.hypers.HotItemsAnalysis
+package cn.yy.HotItemsAnalysis
 
 import java.sql.Timestamp
 
@@ -38,7 +38,7 @@ object HotItems {
     // 设置时间特征为事件时间
     env.setStreamTimeCharacteristic(TimeCharacteristic.EventTime)
     // 读取文本文件
-    val stream: DataStream[String] = env.readTextFile("G:\\idea arc\\BIGDATA\\project\\src\\main\\resources\\UserBehavior.csv")
+    val stream: DataStream[String] = env.readTextFile("C:\\Users\\Administrator\\IdeaProjects\\FlinkECUserBehaviorAnalysis\\src\\main\\resources\\UserBehavior.csv")
     // 对读取到的数据源进行处理
     stream.map(data =>{
       val dataArray: Array[String] = data.split(",")

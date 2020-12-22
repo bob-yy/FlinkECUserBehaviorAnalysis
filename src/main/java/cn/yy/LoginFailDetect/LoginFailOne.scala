@@ -1,4 +1,4 @@
-package com.hypers.LoginFailDetect
+package cn.yy.LoginFailDetect
 
 import java.util
 
@@ -36,7 +36,7 @@ object LoginFailOne {
     env.setStreamTimeCharacteristic(TimeCharacteristic.EventTime)
 
     // 读取csv文件
-    env.readTextFile("G:\\idea arc\\BIGDATA\\project\\src\\main\\resources\\LoginLog.csv")
+    env.readTextFile("C:\\Users\\Administrator\\IdeaProjects\\FlinkECUserBehaviorAnalysis\\src\\main\\resources\\LoginLog.csv")
        .map(data => {
           // 将文件中的数据封装成样例类
           val dataArray: Array[String] = data.split(",")

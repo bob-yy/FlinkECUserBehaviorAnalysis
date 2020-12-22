@@ -1,4 +1,4 @@
-package com.hypers.MarketAnalysis
+package cn.yy.MarketAnalysis
 
 import java.sql.Timestamp
 
@@ -30,7 +30,8 @@ object AdStatisticsByGeo {
     // 设置时间特征为事件时间
     env.setStreamTimeCharacteristic(TimeCharacteristic.EventTime)
 
-    env.readTextFile("G:\\idea arc\\BIGDATA\\project\\src\\main\\resources\\AdClickLog.csv")
+    env
+      .readTextFile("C:\\Users\\Administrator\\IdeaProjects\\FlinkECUserBehaviorAnalysis\\src\\main\\resources\\AdClickLog.csv")
       .map(data => {
         // 样例数据：561558,3611281,guangdong,shenzhen,1511658120
         val dataArray: Array[String] = data.split(",")

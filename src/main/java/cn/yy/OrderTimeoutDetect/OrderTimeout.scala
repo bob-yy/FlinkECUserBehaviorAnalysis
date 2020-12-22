@@ -1,4 +1,4 @@
-package com.hypers.OrderTimeoutDetect
+package cn.yy.OrderTimeoutDetect
 
 import org.apache.flink.api.common.state.{ValueState, ValueStateDescriptor}
 import org.apache.flink.streaming.api.TimeCharacteristic
@@ -31,7 +31,7 @@ object OrderTimeout {
     // 设置时间特征为事件时间
     env.setStreamTimeCharacteristic(TimeCharacteristic.EventTime)
     // 读取输入的订单数据流
-    val orderEventStream: DataStream[OrderEvent] = env.readTextFile("G:\\idea arc\\BIGDATA\\project\\src\\main\\resources\\OrderLog.csv")
+    val orderEventStream: DataStream[OrderEvent] = env.readTextFile("C:\\Users\\Administrator\\IdeaProjects\\FlinkECUserBehaviorAnalysis\\src\\main\\resources\\OrderLog.csv")
       .map(data => {
         // 示例数据： 34729,pay,sd76f87d6,1558430844
         val dataArray: Array[String] = data.split(",")
