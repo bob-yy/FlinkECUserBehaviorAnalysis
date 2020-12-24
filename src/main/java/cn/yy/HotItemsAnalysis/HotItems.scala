@@ -28,6 +28,8 @@ object HotItems {
 
   def main(args: Array[String]): Unit = {
 
+    val path = "/opt/project/data_warehouse/data/taobao/UserBehavior.csv"
+//    val path = "C:\\Users\\Administrator\\IdeaProjects\\FlinkECUserBehaviorAnalysis\\src\\main\\resources\\UserBehavior.csv"
     // 定义流处理环境
     val env: StreamExecutionEnvironment = StreamExecutionEnvironment.getExecutionEnvironment
     // 设置并行度
@@ -35,7 +37,7 @@ object HotItems {
     // 设置时间特征为事件时间
     env.setStreamTimeCharacteristic(TimeCharacteristic.EventTime)
     // 读取文本文件
-    val stream: DataStream[String] = env.readTextFile("C:\\Users\\Administrator\\IdeaProjects\\FlinkECUserBehaviorAnalysis\\src\\main\\resources\\UserBehavior.csv")
+    val stream: DataStream[String] = env.readTextFile(path)
     // 对读取到的数据源进行处理
     stream.map(data =>{
       val dataArray: Array[String] = data.split(",")
