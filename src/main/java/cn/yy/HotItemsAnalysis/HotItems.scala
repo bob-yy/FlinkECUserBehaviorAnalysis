@@ -28,8 +28,8 @@ object HotItems {
 
   def main(args: Array[String]): Unit = {
 
-    val path = "/opt/project/data_warehouse/data/taobao/UserBehavior.csv"
-//    val path = "C:\\Users\\Administrator\\IdeaProjects\\FlinkECUserBehaviorAnalysis\\src\\main\\resources\\UserBehavior.csv"
+//    val path = "hdfs://bigdata201:9000/opt/project/data_warehouse/data/taobao/UserBehavior.csv"
+    val path = "C:\\Users\\Administrator\\IdeaProjects\\FlinkECUserBehaviorAnalysis\\src\\main\\resources\\UserBehavior.csv"
     // 定义流处理环境
     val env: StreamExecutionEnvironment = StreamExecutionEnvironment.getExecutionEnvironment
     // 设置并行度
